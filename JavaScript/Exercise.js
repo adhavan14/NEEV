@@ -4,7 +4,7 @@ function customMap(arg, callback) {
 
     let result = [];
     for (let i = 0;i< arg.length;i++) {
-        result.push(callback(arg[i], i, arg));
+        result.push(callback(arg[i]);
     }
     return result;
 }
@@ -16,7 +16,7 @@ function customFilter(arg, callback) {
 
     let result = [];
     for (let i=0; i<arg.length; i++) {
-        if(callback(arg[i], i, arg)) {
+        if(callback(arg[i])) {
             result.push(arg[i]);
         }
     }
@@ -30,7 +30,7 @@ console.log(filterResult);
 
 function customForeach(arg, callback){
     for (let i = 0; i<arg.length; i++) {
-        callback(arg[i], i, arg);
+        callback(arg[i]);
     }
 }
 
@@ -41,7 +41,7 @@ customForeach(args, (num) => console.log(num));
 function customReduce(arg, callback, initialValue) {
     let accumulator = initialValue;
     for (let i =0 ;i< arg.length;i++) {
-            accumulator = callback(accumulator, arg[i], i, arg)
+            accumulator = callback(accumulator, arg[i])
     }
 
     return accumulator;
